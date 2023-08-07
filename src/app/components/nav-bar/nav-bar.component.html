@@ -1,0 +1,28 @@
+<div class="nav-bar">
+    <div class="container">
+        <div class="nav-bar__content">
+            <a href="/home"(click)="closeNav()"> 
+
+                
+                <div class="nav-bar__log">
+                    online Store
+                </div>
+            </a>
+            <div class="nav-bar__menu-btn" (click)="toggleNav()">...</div>
+        </div>
+    </div>
+    <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
+        <div class="container">
+            <div class="nav-bar__links">
+                <a routerLink="/home" routerLinkActive="active-page" (click)="closeNav()">home</a>
+                <a routerLink="/product/add" routerLinkActive="active-page" (click)="closeNav()"> add product</a>
+                <a>link</a>
+                <a>link</a>
+                <a>link</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="close-curtain" [class.open]="showNavBar" (click)="closeNav()">
+
+</div>

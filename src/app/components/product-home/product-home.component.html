@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="product-warpper">
+        <div  *ngFor="let item of data; let ind = index" class="row" [ngClass]="{'row-reverse':ind % 2 === 0}">
+            <div class="row__element">
+                <div class="card">
+                    <div class="image">{{item.name}}</div>
+                    <div class="details">
+                        <div>
+
+                            <div class="details__title">
+                                {{item.name}}
+                            </div>
+                            <div class="details__data">
+                                price: {{item.price}}
+                            </div>
+                        </div>
+                        <div class="card__btn" (click)="goToProd(item.id)" >view details</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row__element">
+                <div class="thumbnail-wrapper">
+                    <div class="thumbnail" *ngFor="let thumb of item.subs">
+                            {{thumb.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.jumbotron{
+    width: 100%;
+    overflow: hidden;
+    max-height: calc(100vh - 60px);
+    img{
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+
+    }
+}

@@ -1,0 +1,26 @@
+.input-group{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding:5px;
+    margin-bottom: 10px;
+    &__label{
+        display: block;
+        padding-left: 8px;
+    }
+    &__input{
+        width: 100%;
+        display:block;
+        padding:5px;
+        border-radius: 8px;
+        margin: 5px 0;
+
+    }
+    &__error{
+        margin: 0;
+        color: red;
+        font-size: 14px;
+        padding-left: 8px;
+
+    }
+}
