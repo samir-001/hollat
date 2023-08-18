@@ -4,7 +4,10 @@
       
           <div class="nav-bar__linkscontrols" [class.en]="dictionary.lang!=='ar'">
               <div class="nav-bar__control">
-                  <div class="nav-bar__menu-btn" (click)="toggleNav()">...</div>
+                  <div class="nav-bar__menu-btn" (click)="toggleNav()">
+                    <span class="dash">
+                    </span>
+                  </div>
                 </div>
                 <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()"[class.nav-bar--white]="!isTopZero">{{dictionary.lang}}</div>
               <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
