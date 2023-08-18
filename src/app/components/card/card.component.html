@@ -1,0 +1,25 @@
+<div class="card">
+    <div>
+        <mat-icon class="card__icon">{{cardIcon}}</mat-icon>
+    </div>
+    <h3 class="card__title">
+      {{cardTitle}}
+    </h3>
+    <div class="card__text">
+   
+        {{cardContent}}
+</div>
+    <div class="card__extended-section" *ngIf="isExtendable">
+        <div class="card__extended-content" [class.card__extended-content--open]="isOpen" [class.en]="dictionary.lang==='en'" >
+            <p *ngFor="let item of cardExtendedContent " class="card__extended-content__item" [class.card__extended-content__item--en]="dictionary.lang==='en'" > 
+               <span class="card__extended-content__text" >
+                {{item}}
+               </span> 
+               <span class="card__extended-content__text">
+                <mat-icon class="icon">done_all</mat-icon>
+               </span>
+            </p>
+        </div>
+        <div class="card__extended-section-btn" (click)="changeCardOPening()"></div>
+    </div>
+</div>

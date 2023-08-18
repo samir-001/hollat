@@ -1,0 +1,37 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    
+    &__section{
+        flex: 1;
+        
+    }
+    &__image{
+        @media (max-width:900px) {
+            display: none;
+        }
+    }
+    &__pargraph{
+        padding: 0 50px;
+        &-item{
+            padding: 10px 0;
+        }
+    }
+    &__content-title{
+        font-size: 34px;
+        margin-bottom: 30px;
+        font-weight: 1000;
+        display: inline-block;
+        color:rgba(105, 201, 188, 0.836);
+        background-image: url("../../../assets/title-bg.png");
+        background-position:center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
+    
+}

@@ -1,3 +1,28 @@
-<div class="jumbotron">
-    <img src="/assets/images/jumbotron.jpg"/>
+<div class="jumbotron__wrapper" >
+    <div class="container">
+ 
+        <div class="jumbotron" [class.en]="dictionary.lang!=='ar'">
+            <div class="jumbotron__item">
+                <img class="image" src="/assets/macbook-hollat.png"/>
+            </div>
+            <div class="jumbotron__content jumbotron__item" [class.en]="dictionary.lang!=='ar'">
+                <h3 class="content-title">
+                    {{dictionary.lang === "ar"?dictionary.hollat.ar :dictionary.hollat.en}}
+                </h3>
+                <p class="content-text">
+                    {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}
+                </p>
+                <div class="content-control" [class.en]="dictionary.lang!=='ar'">
+                    <a class="animated-btn-container" href="#screens">
+                        <svg><rect></rect></svg>
+                        {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}}
+                    </a>
+                    <a class="animated-btn-container" href="./features">
+                        <svg><rect></rect></svg>
+                        {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

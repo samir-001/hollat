@@ -1,0 +1,34 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    
+
+    &__title{
+        text-align: center;
+        margin-top: 50px;
+        color:rgba(105, 201, 188, 0.836);
+        background-image: url("../../../assets/title-bg.png");
+        background-position:center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &--item{
+            flex: 1;
+            @media (min-width:600px) and (max-width:900px) {
+                width: 50%;
+                flex: none;
+            }
+            @media (max-width:600px) {
+                width: 100%;
+                flex: none;
+            }
+        }
+      
+        
+    }
+}

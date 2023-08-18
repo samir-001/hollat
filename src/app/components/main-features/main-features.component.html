@@ -1,0 +1,51 @@
+<div class="mainFeatures">
+    <div class="container">
+
+        <h1 class="mainFeatures__title" >
+            {{dictionary.lang === "ar"?dictionary.ThemainObjectivesTitle.ar :dictionary.ThemainObjectivesTitle.en}}
+        </h1>
+
+        <div class="mainFeatures__content" >
+            <div class="mainFeatures__content__item" *ngFor="let item of featureData.mainFeature">
+                <app-card
+                [isExtendable]="true" 
+                [cardTitle] = "dictionary.lang === 'ar'? item.title.ar:item.title.en"
+                [cardContent] ="dictionary.lang === 'ar'? item.caption.ar:item.caption.en"
+                [cardIcon] = 'item.icon'
+                [cardExtendedContent] ="dictionary.lang === 'ar'? item.details.ar : item.details.en"
+                ></app-card>
+            </div>
+            <!-- <div class="mainFeatures__content__item">
+                <app-card
+                [isExtendable]="true" 
+                cardTitle
+                cardContent
+                cardIcon
+                cardExtendedContent
+                ></app-card>
+            </div>
+
+                <div class="mainFeatures__content__item">
+                    <app-card
+                    [isExtendable]="true" 
+                    cardTitle
+                    cardContent
+                    cardIcon
+                    cardExtendedContent
+                    ></app-card>
+                </div>
+
+            <div class="mainFeatures__content__item">
+                <app-card
+                [isExtendable]="true" 
+            cardTitle
+            cardContent
+            cardIcon
+            cardExtendedContent
+            ></app-card>
+        </div> -->
+
+        </div>
+    </div>
+    
+</div>

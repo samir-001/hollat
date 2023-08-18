@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-jumbotron',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./jumbotron.component.scss']
 })
 export class JumbotronComponent {
+  constructor(public dictionary:LanguageService){
 
+  }
 }

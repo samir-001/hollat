@@ -1,0 +1,20 @@
+<div class="page-title">
+    <h1>{{ dictionary.lang ==="ar" ?dictionary.productFeatures.ar:dictionary.productFeatures.en}}</h1>
+    <p>{{dictionary.lang ==="ar" ?dictionary.aboutpageSlogan.ar:dictionary.aboutpageSlogan.en}}</p>
+</div>
+<div class="feature-page">
+    <div class="container">
+        <div class="feature-page__content">
+            <div class="feature-page__content-item" *ngFor="let item of featureData.featuresData">
+                <app-card
+                [isExtendable]="true" 
+                [cardTitle] = "dictionary.lang === 'ar'? item.title.ar:item.title.en"
+                [cardContent] ="dictionary.lang === 'ar'? item.caption.ar:item.caption.en"
+                [cardIcon] = 'item.icon'
+                [cardExtendedContent] ="dictionary.lang === 'ar'? item.details.ar : item.details.en"
+                ></app-card>
+            </div>
+        </div>
+    </div>
+</div>
+<app-call-to-action></app-call-to-action>

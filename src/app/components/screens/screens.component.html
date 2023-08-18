@@ -1,0 +1,32 @@
+<div id="screens" calss="screen">
+    <h1 class="screen__title">
+        {{dictionary.lang === "ar"?dictionary.someScreens.ar :dictionary.someScreens.en}}
+
+    </h1>
+    <div class="screen__links">
+        <a class="screen__link" (click)="setActiveFn('all')" [class.active-item]="activeItem ==='all'">
+            {{dictionary.lang === "ar"?dictionary.allScreens.ar :dictionary.allScreens.en}}
+        </a>
+        <a class="screen__link" (click)="setActiveFn('setting')" [class.active-item]="activeItem ==='setting'">
+            {{dictionary.lang === "ar"?dictionary.settingsScreens.ar :dictionary.settingsScreens.en}}
+        </a>
+        <a class="screen__link" (click)="setActiveFn('report')" [class.active-item]="activeItem ==='report'">
+            {{dictionary.lang === "ar"?dictionary.reportsScreens.ar :dictionary.reportsScreens.en}}
+        </a>
+        <a class="screen__link" (click)="setActiveFn('ticket')"  [class.active-item]="activeItem ==='ticket'">
+            {{dictionary.lang === "ar"?dictionary.ticketsScreens.ar :dictionary.ticketsScreens.en}}
+        </a>
+    </div>
+    <div class="screen__views">
+        <div class="screen__item" *ngFor="let item of screens" [hidden]=" !(item.type === activeItem || activeItem === 'all' )">
+            <div class="screen-item">
+                <div class="screen-item__curtain">
+                    <h3>{{dictionary.lang === "ar" ? item.title.ar:item.title.en}}</h3>
+                    <p>{{dictionary.lang === "ar" ? item.subTitle.ar:item.subTitle.en}}</p>
+                </div>
+                <img src="/assets/{{item.image}}"/>
+            </div>
+        </div>
+    </div>
+
+</div>

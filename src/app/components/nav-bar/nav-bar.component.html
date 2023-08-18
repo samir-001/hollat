@@ -1,25 +1,62 @@
-<div class="nav-bar">
+<div class="nav-bar" [class.nav-bar--white]="!isTopZero" >
     <div class="container">
-        <div class="nav-bar__content">
-            <a href="/home"(click)="closeNav()"> 
-
-                
-                <div class="nav-bar__log">
-                    online Store
+        <div class="nav-bar__content" [class.en]="dictionary.lang==='en'">
+      
+          <div class="nav-bar__linkscontrols" [class.en]="dictionary.lang!=='ar'">
+              <div class="nav-bar__control">
+                  <div class="nav-bar__menu-btn" (click)="toggleNav()">...</div>
                 </div>
-            </a>
-            <div class="nav-bar__menu-btn" (click)="toggleNav()">...</div>
-        </div>
-    </div>
-    <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
-        <div class="container">
-            <div class="nav-bar__links">
-                <a routerLink="/home" routerLinkActive="active-page" (click)="closeNav()">home</a>
-                <a routerLink="/product/add" routerLinkActive="active-page" (click)="closeNav()"> add product</a>
-                <a>link</a>
-                <a>link</a>
-                <a>link</a>
+                <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()"[class.nav-bar--white]="!isTopZero">{{dictionary.lang}}</div>
+              <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
+                      <div class="nav-bar__links" [class.en]="dictionary.lang!=='ar'">
+                        <a 
+                        [class.nav-bar--white]="!isTopZero"
+                        routerLink="/contact" 
+                        routerLinkActive="active-page" 
+                        (click)="closeNav()">
+                            {{dictionary.lang === "ar"?dictionary.contact.ar:dictionary.contact.en}}
+                        </a>
+                         
+                          <a 
+                          [class.nav-bar--white]="!isTopZero"
+                          routerLink="/features" 
+                          routerLinkActive="active-page" 
+                          (click)="closeNav()">
+                              {{dictionary.lang === "ar"?dictionary.productFeatures.ar:dictionary.productFeatures.en}}
+                          </a>
+                          <a
+                          [class.nav-bar--white]="!isTopZero"
+                          routerLink="/about" 
+                          routerLinkActive="active-page" 
+                          (click)="closeNav()">
+                              {{dictionary.lang === "ar"?dictionary.about.ar:dictionary.about.en}}
+                          </a>
+                        
+                          <a 
+                          [class.nav-bar--white]="!isTopZero"
+                          routerLink="/home" 
+                          routerLinkActive="active-page" 
+                          (click)="closeNav()">
+                          
+                              {{dictionary.lang === "ar"?dictionary.home.ar:dictionary.home.en}}
+                          </a>
+                       
+                      </div>
+                 
+              </div>
+          </div>
+          <a href="/home"(click)="closeNav()"> 
+            <div class="nav-bar__log">
+                <div [hidden]="!(dictionary.lang === 'ar')">
+                    <img height="50px" [hidden]="isTopZero " src="/assets/logo-colored-ar.png"/>
+                    <img height="50px" [hidden]="!isTopZero" src="/assets/logo-light-ar.png"/>
+                </div>
+                <div [hidden]="(dictionary.lang === 'ar')">
+                    <img height="50px" [hidden]="isTopZero" src="/assets/logo-en-colored.png"/>
+                    <img height="50px" [hidden]="!isTopZero" src="/assets/logo-en-light.png"/>
+                </div>
             </div>
+        </a>
         </div>
     </div>
 </div>

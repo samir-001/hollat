@@ -1,4 +1,14 @@
+<div [hidden]="!loading.isLoading">    
+    <app-loading></app-loading>
+</div>
+<div [hidden]="loading.isLoading">
+    <app-nav-bar></app-nav-bar>
 
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+    <a href="/contact">
+        <div class="demo-btn__fixed">
+            {{dictionary.lang === "ar"?dictionary.requestDemo.ar :dictionary.requestDemo.en}}
+        </div>
+    </a>
+</div>

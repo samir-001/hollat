@@ -1,0 +1,40 @@
+<div class="container">
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-row__item">
+                <input  placeholder="first name" type="text" class="form-row__input" name="firstName" [(ngModel)]="contact.firstName" required/>
+                <small></small>
+            </div>
+            <div class="form-row__item">
+                <input placeholder="last name" type="text" class="form-row__input" name="lastName" [(ngModel)]="contact.lastName"/>
+                <small></small>
+            </div>
+        </div>
+        <div  class="form-row" class="form-row">
+            <div class="form-row__item">
+                <input #firstName="ngModel" placeholder="email" type="email" class="form-row__input" name="email" [(ngModel)]="contact.email"/>
+                <small ></small>
+            </div>
+                <div class="form-row__item">
+                   <input placeholder="phone Number" type="number" class="form-row__input"  name="phone" [(ngModel)]="contact.phone"/>
+                   <small></small>
+               </div>
+
+                </div>
+
+        <div class="form-row">
+            <div class="form-row__item">
+             <input placeholder="subject" type="text" class="form-row__input" name="subject"  [(ngModel)]="contact.subject">
+             <small></small>
+            </div>
+        </div>
+        <div class="form__row">
+            <textarea rows="5" placeholder="message"  resize="none" name="message" [(ngModel)]="contact.message"></textarea>
+        </div>
+        <button type="submit" class="animated-btn-container animated-btn-container-dark">
+            <svg><rect class="dark"></rect></svg>
+            {{dictionary.lang === "ar"?dictionary.send.ar :dictionary.send.en}}
+        </button>
+    </form>
+</div>

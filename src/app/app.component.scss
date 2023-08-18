@@ -1,0 +1,12 @@
+.demo-btn__fixed{
+    position: fixed;
+    background-color: #75cabf;
+    color: white;
+    padding: 0px 10px 10px 10px;
+    border-radius: 10px;
+    left:0;
+    top: 30%;
+    transform: translate(-40%,-50%) rotate(90deg);
+    z-index: 1001;
+    
+}

@@ -1,3 +1,15 @@
 <div class="footer">
-    all right reserved for demo &reg;
+    <img height="50px" [hidden]="dictionary.lang === 'en'" src="/assets/logo-light-ar.png"/>
+    <img height="50px" [hidden]="dictionary.lang === 'ar'"  src="/assets/logo-en-light.png" />
+    <p class="footer__slogan">
+        {{dictionary.lang === "ar"?dictionary.slogan.ar:dictionary.slogan.en}}
+    </p>
+    <div class="footer__social">
+        <a class="footer__social--link" href="https://www.facebook.com/hawsabahsa/">facebook</a>
+        <a class="footer__social--link" href="https://twitter.com/HawsabahSA">twitter</a>
+    </div>
+    <div class="footer__copy-right">
+        {{dictionary.lang === "ar"?dictionary.copyRight.ar:dictionary.copyRight.en}}
+    </div>
+
 </div>

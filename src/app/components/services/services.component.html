@@ -1,0 +1,33 @@
+<div class="services">
+    <h1 class="services__title">
+        {{dictionary.lang === "ar"?dictionary.whyChooseHollet.ar :dictionary.whyChooseHollet.en}}
+       
+    </h1>
+    <div class="container">
+
+        <div class="services__content">
+            <div class="services__content--item">
+                <app-card
+                cardIcon= 'supervised_user_circle'
+                [cardTitle] = 'dictionary.lang === "ar"?dictionary.cooperation.ar :dictionary.cooperation.en'
+                [cardContent] = 'dictionary.lang === "ar"?dictionary.cooperationText.ar :dictionary.cooperationText.en'
+                ></app-card>
+            </div>
+            <div class="services__content--item">
+                <app-card
+                cardIcon= 'autorenew'
+                [cardTitle] = 'dictionary.lang === "ar"?dictionary.integration.ar :dictionary.integration.en'
+                [cardContent] = 'dictionary.lang === "ar"?dictionary.integrationText.ar :dictionary.integrationText.en'
+                ></app-card>
+            </div>
+            <div class="services__content--item">
+                <app-card
+                cardIcon= 'center_focus_strong'
+                [cardTitle] = 'dictionary.lang === "ar"?dictionary.customPortal.ar :dictionary.customPortal.en'
+                [cardContent] = 'dictionary.lang === "ar"?dictionary.customPortalText.ar :dictionary.customPortalText.en'
+                ></app-card>
+            </div>
+
+        </div>
+    </div>
+</div>

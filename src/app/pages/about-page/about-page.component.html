@@ -1,0 +1,32 @@
+<div class="page-title">
+    <h1>{{ dictionary.lang ==="ar" ?dictionary.hollat.ar:dictionary.hollat.en}}</h1>
+    <p>{{dictionary.lang ==="ar" ?dictionary.aboutpageSlogan.ar:dictionary.aboutpageSlogan.en}}</p>
+</div>
+<div class="about-page" [class.en]="dictionary.lang!=='ar'">
+
+    <div class="container">
+        <div class="about-page__content">
+
+        <div class="about-page__title">
+        {{dictionary.lang === "ar"?dictionary.aboutHollat.ar :dictionary.aboutHollat.en}}
+    </div>
+    <div class="about-page__text"*ngFor="let i of changeLang(dictionary.lang)">{{i}}</div>
+    <div  class="about-page__extended-content" [class.about-page__extended-content--open]="showMore" >
+        <h1>{{dictionary.lang === "ar"?dictionary.ThemaingoalTitle.ar :dictionary.ThemaingoalTitle.en}}</h1>
+        {{dictionary.lang === "ar"?dictionary.ThemainObjectiveText.ar :dictionary.ThemainObjectiveText.en}}
+        
+    </div>
+    <a class="animated-btn-container animated-btn-container-dark" (click)="changeContentVolum()"  >
+        <svg><rect class="dark"></rect></svg>
+        <span [hidden]="showMore">
+            {{dictionary.lang === "ar"?dictionary.showMore.ar :dictionary.showMore.en}}
+        </span>
+        <span [hidden]="!showMore">
+            {{dictionary.lang === "ar"?dictionary.showLess.ar :dictionary.showLess.en}}
+        </span>
+    </a>
+</div>
+
+</div>
+</div>
+<app-call-to-action></app-call-to-action>

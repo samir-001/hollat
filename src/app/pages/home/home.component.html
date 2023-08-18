@@ -1,53 +1,6 @@
-
 <app-jumbotron></app-jumbotron>
-<div class="container">
-<!-- <h3 class="section-header">most popular</h3> -->
-<!-- <swiper-container  navigation={true} slides-per-view="4" space-between="30" autoplay="true" speed="500" loop="true" css-mode="true"   mousewheel-force-to-axis="true">
-    <swiper-slide *ngFor="let item of data">
-        <div class="card">
-            <div class="image">{{item.name}}</div>
-            <div class="details">
-                <div>
-                    
-                    <div class="details__title">
-                        {{item.name}}
-                    </div>
-                    <div class="details__data">
-                        price: {{item.price}}
-                    </div>
-                </div>
-                <div class="card__btn" (click)="goToProd(item.id)">view details</div>
-            </div>
-        </div>
-    </swiper-slide>
-</swiper-container>  -->
-<h3 class="section-header">you last visits</h3>
-
-<div class="carousel-wrapper">
-    <div class="carousel-wrapper__btn carousel-wrapper__btn--right"(click)="scroll('lastVisitCarousel','next')" >next</div>
-    <div class="carousel-wrapper__btn carousel-wrapper__btn--left" (click)="scroll('lastVisitCarousel','prev')">prev</div>
-
-<div #lastVisitCarousel id="lastVisitCarousel" class="carousel">
-    <div class="carousel__item"*ngFor="let item of data">
-        <div class="card" >
-             <div class="image">{{item.name}}</div>
-        </div>
-   </div>
-</div>
-</div>
-<h3 class="section-header">you last visits</h3>
-<div class="carousel-wrapper">
-    <div class="carousel-wrapper__btn carousel-wrapper__btn--right"(click)="scroll('mostVisit','next')" >next</div>
-    <div class="carousel-wrapper__btn carousel-wrapper__btn--left" (click)="scroll('mostVisit','prev')">prev</div>
-    <div #mostVisit id="mostVisit" class="carousel">
-        <div class="carousel__item"*ngFor="let item of data">
-            <div class="card" >
-                <div class="image">{{item.name}}</div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-</div>
-<app-product-home></app-product-home>
-
+<app-about></app-about>
+<app-main-features></app-main-features>
+<app-screens></app-screens>
+<app-services></app-services>
+<app-call-to-action></app-call-to-action>

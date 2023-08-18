@@ -1,0 +1,35 @@
+.screen-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+
+    &__curtain{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.63);
+        h3{
+            margin: 0;
+
+        }
+        p{
+            margin: 0;
+        }
+    }
+    &:hover &__curtain{
+        display: flex;
+    }
+}
