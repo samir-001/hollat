@@ -7,6 +7,8 @@ form{
         display: flex;
     overflow: hidden;
     justify-content: center;
+    align-items: center;
+    justify-content: center;
     @media (max-width:600px) {
         flex-direction: column;
     }
@@ -29,6 +31,7 @@ form{
 
 }
 textarea{
+
     display: inline-block;
     width: 98.4%;
     resize: none;
@@ -36,6 +39,8 @@ textarea{
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
+    margin-left: auto;
+margin-right: auto;
     
 }
 }

@@ -5,9 +5,9 @@
 <div class="about-page" [class.en]="dictionary.lang!=='ar'">
 
     <div class="container">
-        <div class="about-page__content">
+        <div class="about-page__content" [class.about-page__content--en]="dictionary.lang!=='ar'">
 
-        <div class="about-page__title">
+        <div class="about-page__title" >
         {{dictionary.lang === "ar"?dictionary.aboutHollat.ar :dictionary.aboutHollat.en}}
     </div>
     <div class="about-page__text"*ngFor="let i of changeLang(dictionary.lang)">{{i}}</div>
