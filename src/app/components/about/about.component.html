@@ -8,7 +8,7 @@
                         {{dictionary.lang === "ar"?dictionary.aboutHollat.ar :dictionary.aboutHollat.en}}
                     </div>
                     <div class="about__pargraph-item"*ngFor="let i of changeLang(dictionary.lang)">{{i}}</div>
-                    <a class="animated-btn-container animated-btn-container-dark" href="./about">
+                    <a class="animated-btn-container animated-btn-container-dark" routerLink="./about">
                         <svg><rect class="dark"></rect></svg>
                         {{dictionary.lang === "ar"?dictionary.aboutHollat.ar :dictionary.aboutHollat.en}}
                     </a>
