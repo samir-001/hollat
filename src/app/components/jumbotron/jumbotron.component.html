@@ -13,11 +13,11 @@
                     {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}
                 </p>
                 <div class="content-control" [class.en]="dictionary.lang!=='ar'">
-                    <a class="animated-btn-container" href="#screens">
+                    <a class="animated-btn-container" routerLink="#screens">
                         <svg><rect></rect></svg>
                         {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}}
                     </a>
-                    <a class="animated-btn-container" href="./features">
+                    <a class="animated-btn-container" routerLink="./features">
                         <svg><rect></rect></svg>
                         {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}}
                     </a>
