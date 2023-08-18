@@ -11,7 +11,7 @@
     @media (max-width:900px) {
         flex-direction: column!important; 
         overflow: hidden;
-        height: auto;
+        height: auto!important;
         padding: 30px 20px; 
 }
     &__item{

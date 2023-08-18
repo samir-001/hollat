@@ -6,7 +6,10 @@
     justify-content: center;
     align-items: center;
     text-align: right;
-    
+
+      @media (max-width:900px) {
+            height: auto;
+        }
     &__section{
         flex: 1;
         
@@ -18,6 +21,8 @@
     }
     &__pargraph{
         padding: 0 50px;
+        @media (max-width:900px) {
+            padding: 0 10px;        }
         &-item{
             padding: 10px 0;
         }
