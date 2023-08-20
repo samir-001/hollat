@@ -1,6 +1,15 @@
 .call-to-action{
     padding: 50px 0;
     text-align: center;
+    background-image: url("../../../assets/polygon-bg.svg");
+    background-size: cover;
+    background-position: center center;
+    color:white;
+    font-size: 20px;
+    &__title{
+        font-size: 52px;
+        margin: 10px;
+    }
     &__control{
         padding: 20px;
         display: flex;

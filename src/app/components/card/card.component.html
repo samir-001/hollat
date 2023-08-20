@@ -1,12 +1,12 @@
-<div class="card">
+<div class="card" [class.card--background]="isExtendable">
     <div>
-        <mat-icon class="card__icon">{{cardIcon}}</mat-icon>
+        <mat-icon class="card__icon" [class.card__icon--white]="isExtendable" [class.card__icon--extended]="isExtendable">{{cardIcon}}</mat-icon>
     </div>
-    <h3 class="card__title">
+    <h3 class="card__title"  [class.card__title--extended]="isExtendable" >
       {{cardTitle}}
     </h3>
-    <div class="card__text">
-   
+    <div class="card__text" [class.card__text--extended]="isExtendable">
+
         {{cardContent}}
 </div>
     <div class="card__extended-section" *ngIf="isExtendable">

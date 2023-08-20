@@ -1,16 +1,24 @@
+<img class="colored-border" src="/assets/rainbow-bar.png" alt="">
 <div class="nav-bar" [class.nav-bar--white]="!isTopZero" >
     <div class="container">
         <div class="nav-bar__content" [class.en]="dictionary.lang==='en'">
       
           <div class="nav-bar__linkscontrols" [class.en]="dictionary.lang!=='ar'">
               <div class="nav-bar__control">
+                <div>
+                    test
+                </div>
                   <div class="nav-bar__menu-btn" (click)="toggleNav()">
                     <span class="dash">
                     </span>
                   </div>
+            </div>
+            
+                <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()"[class.nav-bar--white]="!isTopZero">
+                    {{dictionary.lang}}
                 </div>
-                <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()"[class.nav-bar--white]="!isTopZero">{{dictionary.lang}}</div>
               <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
+
                       <div class="nav-bar__links" [class.en]="dictionary.lang!=='ar'">
                         <a 
                         [class.nav-bar--white]="!isTopZero"
@@ -48,6 +56,7 @@
                  
               </div>
           </div>
+          
           <a href="/home"(click)="closeNav()"> 
             <div class="nav-bar__log">
                 <div [hidden]="!(dictionary.lang === 'ar')">

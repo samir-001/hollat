@@ -1,18 +1,28 @@
+.colored-border{
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+}
 .nav-bar{
     background-color: #616699;
     position: fixed;
-    top:0;
+    padding:5px;
+    top: 5px;
     color:white;
     width:100%;
-    height: 60px;
+    height: 81px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     z-index: 999;
     &--white{
         background-color: white;
-        color: #75cabf;
+        color: #616699;
     }
+ 
     &__linkscontrols{
         display: flex;
         justify-content: center;
@@ -20,7 +30,6 @@
     }
     &__control{
 
-        display: none;
         @media (max-width:900px) {
             display: flex;
             flex-direction: row;
@@ -35,6 +44,18 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        &::after{
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+        
+            background-color:#f0f0f059 ;
+            width: 70%;
+
+        }
     
     }
     &__logo{
@@ -71,9 +92,27 @@
       flex-direction: row;
         a{
             display: inline-block;
-            padding: 5px;
-            border-radius: 5px;
+            position: relative;
+            padding:20px 10px ;
             margin: 5px;
+            &::after{
+                content:"";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color:white ;
+                width: 0%;
+                transition: all 200ms ease-in-out;
+
+            }
+
+            &:hover{
+                color: #75cabf;
+                &::after{
+                    width: 100%;
+                }
+            }
         }
         @media (max-width:900px) {
             display: flex;

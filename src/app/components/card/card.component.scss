@@ -1,21 +1,47 @@
 .card{
     position: relative;
-    padding: 20px;
+    padding: 60px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 15px;
+    &--background{
+        background-image: url("../../../assets/polygon-bg.svg");
+        background-size: cover;
+        background-position: center center;
+
+    }
     &__icon{
-        font-size: 40px;
-        height: 40px;
-        width: 40px;
+        font-size: 70px;
+        height: 70px;
+        width: 70px;
+        color: rgb(176,178,204);
+        &--white{
+            color: white;
+
+        }
+        &--extended{
+            font-size:50px ;
+            height: 50px;
+            width: 50px;
+        }
     }
     &__title{
-        font-size: 24px;
+        font-size: 30px;
+        margin: 10px;
+        &--extended{
+            font-size:16px ;
+            font-weight: bold;
+        }
     }
     &__text{
         text-align: center;
         min-height: 90px;
+        font-size: 18px;
+        &--extended{
+            font-size:16px ;
+        }
     }
     &__extended-section{
 
@@ -24,14 +50,14 @@
 
         &-btn{
             position: absolute;
-            bottom: -5px;
-            right: -15px;
+            bottom: -7px;
+            right: -22px;
             width: 0; 
             height: 0; 
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
             transform: rotate(-45deg);
-            border-top: 20px solid rgb(117,202,191);
+            border-top: 30px solid rgb(117,202,191);
         }
     }
     &__extended-content{

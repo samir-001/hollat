@@ -1,5 +1,4 @@
 <div class="mainFeatures">
-    <div class="container">
 
         <h1 class="mainFeatures__title" >
             {{dictionary.lang === "ar"?dictionary.ThemainObjectivesTitle.ar :dictionary.ThemainObjectivesTitle.en}}
@@ -9,6 +8,8 @@
             <div class="mainFeatures__content__item" *ngFor="let item of featureData.mainFeature">
                 <app-card
                 [isExtendable]="true" 
+                [whiteIcone]="true" 
+                [hasBackground]="true" 
                 [cardTitle] = "dictionary.lang === 'ar'? item.title.ar:item.title.en"
                 [cardContent] ="dictionary.lang === 'ar'? item.caption.ar:item.caption.en"
                 [cardIcon] = 'item.icon'
@@ -46,6 +47,5 @@
         </div> -->
 
         </div>
-    </div>
     
 </div>

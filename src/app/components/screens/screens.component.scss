@@ -22,11 +22,15 @@
 
     &__title{
         text-align: center;
+        font-size: 52px;
+        margin-bottom: 0;
+        padding: 30px;
         color:rgba(105, 201, 188, 0.836);
         background-image: url("../../../assets/title-bg.png");
         background-position:center center;
         background-size: auto 100%;
         background-repeat: no-repeat
+
     }
     &__links{
         display: flex;
@@ -37,6 +41,10 @@
     &__link{
         padding: 10px;
         color: black;
+        cursor: pointer;
+        &:hover{
+            font-weight: 700;
+        }
     }
     &__item{
         height: 250px;
