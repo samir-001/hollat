@@ -22,10 +22,7 @@
     @media (max-width:900px){
         width: 100%;
     }
-    &-dark{
-        color: #616699;
-        
-    }
+  
     &--white{
         background-color: white;
         color: #616699;
@@ -179,6 +176,7 @@
     left: 0;
     display: none;
     background-color: #00000054;
+    z-index: 998;
 }
 
 .open{
