@@ -13,14 +13,38 @@
                     {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}
                 </p>
                 <div class="content-control" [class.en]="dictionary.lang!=='ar'">
-                    <a class="animated-btn-container" href="#screens">
-                        <svg><rect></rect></svg>
-                        {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}}
-                    </a>
-                    <a class="animated-btn-container" href="./features">
-                        <svg><rect></rect></svg>
-                        {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}}
-                    </a>
+                    <div class="btn-container">
+                        <a href="contact.html" class="ghost-btn">
+                            <svg>
+                              <defs>
+                                <linearGradient>
+                                  <stop offset="0%" stop-color="#FF8282"/>
+                                  <stop offset="100%" stop-color="#E178ED" />
+                                </linearGradient>
+                              </defs>
+                              <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="#ffffff"></rect>
+                            </svg>
+                            <span>
+                                {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}}
+                            </span>
+                         </a>
+                    </div>
+                    <div class="btn-container">
+                        <a href="contact.html" class="ghost-btn">
+                            <svg>
+                              <defs>
+                                <linearGradient>
+                                  <stop offset="0%" stop-color="#FF8282"/>
+                                  <stop offset="100%" stop-color="#E178ED" />
+                                </linearGradient>
+                              </defs>
+                              <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="#ffffff"></rect>
+                            </svg>
+                            <span>
+                                {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}}
+                            </span>
+                         </a>
+                    </div>
                 </div>
             </div>
         </div>
