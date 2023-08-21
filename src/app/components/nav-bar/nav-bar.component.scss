@@ -78,7 +78,7 @@
     
     }
     &__logo{
-        font-size: 17px;
+        
         font-weight: bold;
 
     }
@@ -120,25 +120,30 @@
     &__links-wrapper{
         display: block;
        
-        @media (max-width:900px) {
+        @media (max-width:970px) {
         background-color:  #616699;
         position: absolute;
         width: 100%;
         top:81px;
         left:0;
         display: none;
+        justify-content: flex-end;
+        height: 100vh;
+        align-items: center;
+
 
         }
+      
     }
     &__links{
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
+      
         a{
             display: inline-block;
             position: relative;
-            padding:20px 10px ;
+            padding:20px 10px  ;
             margin: 5px;
             &::after{
                 content:"";
@@ -149,7 +154,10 @@
                 background-color:white ;
                 width: 0%;
                 transition: all 200ms ease-in-out;
-
+                @media (max-width:970px){
+                    display: none;
+                }
+                
             }
 
             &:hover{
@@ -158,38 +166,54 @@
                     width: 100%;
                 }
             }
+            @media (max-width:1175px){
+                font-weight: 500;
+                padding: 5px;
+            }
         }
-        @media (max-width:900px) {
+        @media (max-width:970px) {
             display: flex;
             flex-direction: column-reverse!important;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             padding: 30px;
+            margin: 0px;
+
         }
     }
 }
-.close-curtain{
+.curtain{
+    
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     display: none;
-    background-color: #00000054;
+    background-color: #616699;
     z-index: 998;
+    &__content{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .open{
-    display: block;
+    display: flex;
+    
+
 }
 
 
 .btn{
-    width: 217px;
+    width: 180px;
     text-align: center;
     border-radius: 30px;
     background-color: white;
-    padding: 10px;
+    padding: 5px;
     color: #616699;
     @media (max-width:900px) {
 display: none;    }
@@ -208,4 +232,18 @@ display: none;    }
 .dark{
     background-color: #616699!important
     
+}
+.color-dark{
+    color:#616699 ;
+
+}
+.justify-start{
+    justify-content:flex-start;
+    align-items: center;
+}
+.align-start{
+    align-items: flex-start;
+}
+.hide{
+    display: none;
 }

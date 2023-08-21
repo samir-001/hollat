@@ -1,3 +1,6 @@
+.left-align{
+    text-align: left!important;
+}
 .contact-info{
     background-color: #616699;
     padding: 30px;
@@ -6,8 +9,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width:950px) {
+            flex-direction: column;
+            align-items: center;
+        }
         &__card{
-            
+            font-size: 14px;
             display: flex;
             flex: 1;
             flex-direction: row;
@@ -15,20 +22,29 @@
             align-items: center;
             padding: 15px;
             color: white;
+            @media (max-width:950) {
+                text-align: center;
+                flex-direction: column!important;
+                justify-content: center;
+            }
             img{
-                width: 50px;
-                height: 50px;
+                width: 35px;
+                height: 35px;
                 object-fit: fill;
+                @media (max-width:950px) {
+                    display: none;
+                }
+                
             }
             p{
                 padding:0 15px;
                 margin: 0;
                 text-align: right;
+                @media (max-width:950px) {
+                   text-align: center;
+                }
           
             }
         }
     }
-}
-.left-align{
-    text-align: left!important;
 }

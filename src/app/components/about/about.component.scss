@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    height: 110vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: right;
@@ -73,11 +73,11 @@
     &__pargraph{
         padding: 0 50px;
         font-size: 18px;
-        color: rgb(56, 37, 37);
+        color: rgb(77 81 84);
         @media (max-width:900px) {
             padding: 0 10px;        }
         &-item{
-            padding: 22px 0;
+            padding: 18px 0;
         }
     }
     &__content-title{
@@ -91,6 +91,9 @@
         background-position:center center;
         background-size: auto 100%;
         background-repeat: no-repeat;
+        @media (max-width:600px) {
+            font-size: 42px;
+        }
     }
     
 }

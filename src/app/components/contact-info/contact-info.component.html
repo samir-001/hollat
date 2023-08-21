@@ -1,32 +1,33 @@
 <div class="contact-info">
     <div class="container">
-        <div class="contact-info__content" [class.en]="dictionary.lang !=='ar'">
-        <div class="contact-info__content__card" [class.en]="dictionary.lang !=='ar'">
-            <div>
-                <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "العنوان":"adress"}}</p>
-                <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "المملكة العربية السعودية - الرياض - حي المروج - شارع الأمير جلوي بن تركي بن عبد العزيز":"Kingdom of Saudi Arabia - Riyadh - Al Muruj District - Prince Jalawi Bin Turki Bin Abdulaziz St"}}</p>
-            </div>
-            <img src="../../../assets/contact-icon04.png">
-        </div>
+        <div class="contact-info__content" [class.dd]="dictionary.lang !=='ar'">
+   
    
         <div class="contact-info__content__card" [class.en]="dictionary.lang !=='ar'">
             <div>
-                <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "الدعم الفني":"support"}}</p>
-                <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "من الاحد الى الخميس: 09:00 الى 05:00":"SAT to THU 09:00 AM to 05:00 PM"}}</p>
+                <p  [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"> {{dictionary.lang ==="ar"? "العنوان":"adress"}}</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  > {{dictionary.lang ==="ar"? "المملكة العربية السعودية - الرياض - حي المروج - شارع الأمير جلوي بن تركي بن عبد العزيز":"Kingdom of Saudi Arabia - Riyadh - Al Muruj District - Prince Jalawi Bin Turki Bin Abdulaziz St"}}</p>
+            </div>
+            <img src="../../../assets/contact-icon04.png">
+        </div>
+        <div class="contact-info__content__card" [class.en]="dictionary.lang !=='ar'">
+            <div>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >{{dictionary.lang ==="ar"? "الدعم الفني":"support"}}</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >{{dictionary.lang ==="ar"? "من الاحد الى الخميس: 09:00 الى 05:00":"SAT to THU 09:00 AM to 05:00 PM"}}</p>
             </div>
             <img src="../../../assets/contact-icon03.png">
         </div>
         <div class="contact-info__content__card" [class.en]="dictionary.lang !=='ar'">
             <div>
-            <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "الهاتف":"phone"}}</p>
-            <p [class.left-align]="dictionary.lang !=='ar'">(+996)114887771</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >{{dictionary.lang ==="ar"? "الهاتف":"phone"}}</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >(+996)114887771</p>
         </div>
             <img src="../../../assets/contact-icon02.png">
         </div>
         <div class="contact-info__content__card" [class.en]="dictionary.lang !=='ar'">
             <div>
-                <p [class.left-align]="dictionary.lang !=='ar'">{{dictionary.lang ==="ar"? "البريد الإلكتروني":"Email"}}</p>
-                 <p [class.left-align]="dictionary.lang !=='ar'">hello@hollat.net</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >{{dictionary.lang ==="ar"? "البريد الإلكتروني":"Email"}}</p>
+                <p [class.left-align]="(dictionary.lang !=='ar'&& scrWidth > 951)"  >hello@hollat.net</p>
             </div>
             <img src="../../../assets/contact-icon01.png">
         </div>

@@ -29,12 +29,16 @@
         background-image: url("../../../assets/title-bg.png");
         background-position:center center;
         background-size: auto 100%;
-        background-repeat: no-repeat
+        background-repeat: no-repeat;
+        @media (max-width:950px) {
+            font-size: 42px;
+        }
 
     }
     &__links{
         display: flex;
         justify-content: center;
+        padding: 10px;
         
  
     }

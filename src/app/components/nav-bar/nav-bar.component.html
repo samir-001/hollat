@@ -6,13 +6,18 @@
           <div class="nav-bar__linkscontrols" [class.en]="dictionary.lang!=='ar'">
             <div class="nav-bar__controls" [class.en]="dictionary.lang==='en'">
                 
-                <div class="nav-bar__menu-btn" (click)="toggleNav()">
+                <div class="nav-bar__menu-btn" (click)="toggleNav()" [class.hide]="scrWidth > 970" >
+                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span class="dash" [class.dark]="!isTopZero"></span>
+                </div>
+                <div class="nav-bar__menu-btn "  (click)="toggleCurtain()" (click)="curtainContent('carousel')" [class.hide]="scrWidth < 970">
                     <span class="dash" [class.dark]="!isTopZero"></span>
                     <span class="dash" [class.dark]="!isTopZero"></span>
                     <span class="dash" [class.dark]="!isTopZero"></span>
                 </div>
 
-                <div class="search" >
+                <div class="search" (click)="toggleCurtain()"  (click)="curtainContent('search')" >
                     <mat-icon>search</mat-icon>
                 </div>
                 <div class="btn" [class.btn--dark]="!isTopZero">
@@ -20,13 +25,21 @@
                 </div>
             </div>
             
-            <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
+            <div class="nav-bar__links-wrapper"  [class.open] ="showNavBar"   [class.justify-start] ="dictionary.lang !=='ar' && scrWidth < 970 ">
                 
-                <div class="nav-bar__links" [class.en]="dictionary.lang!=='ar'">
-                    <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()">
+                <div class="nav-bar__links" [class.en]="dictionary.lang === 'en'" [class.align-start] ="dictionary.lang !=='ar' && scrWidth < 970 "   >
+                    <!-- <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()">
                         {{dictionary.lang}}
-                    </div>
+                    </div> -->
+                    <a
+                        [class.color-dark] ="!isTopZero && scrWidth > 970 "
+                        (click)="dictionary.changeLanguage()"
+                        [class.nav-bar-dark]="!isTopZero"
+                        (click)="closeNav()">
+                        {{dictionary.lang}}
+                        </a>
                     <a 
+                        [class.color-dark] ="!isTopZero && scrWidth > 970 "
                         [class.nav-bar-dark]="!isTopZero"
                         routerLink="/contact" 
                         routerLinkActive="active-page" 
@@ -36,6 +49,7 @@
                          
                           <a 
                         [class.nav-bar-dark]="!isTopZero"
+                        [class.color-dark] ="!isTopZero && scrWidth > 970 "
                           routerLink="/features" 
                           routerLinkActive="active-page" 
                           (click)="closeNav()">
@@ -43,6 +57,7 @@
                           </a>
                           <a
                         [class.nav-bar-dark]="!isTopZero"
+                        [class.color-dark] ="!isTopZero && scrWidth > 970 "
                         routerLink="/about"     
                         routerLinkActive="active-page" 
                         (click)="closeNav()">
@@ -51,6 +66,7 @@
                         
                           <a 
                         [class.nav-bar-dark]="!isTopZero"
+                        [class.color-dark] ="!isTopZero && scrWidth > 970 "
                           routerLink="/home" 
                           routerLinkActive="active-page" 
                           (click)="closeNav()">
@@ -78,6 +94,14 @@
         </div>
     </div>
 </div>
-<div class="close-curtain" [class.open]="showNavBar" (click)="closeNav()">
-
+<div class="curtain" [class.open]="showNavBar" [class.open]="curtain">
+    <div class="curtain__content">
+        <div *ngIf="cutainContent === 'search'">
+            <input type="text"/>
+            <button class="v=btn">search</button>
+        </div>
+        <div *ngIf="cutainContent === 'carousel'">
+            carousel
+        </div>
+    </div>
 </div>
