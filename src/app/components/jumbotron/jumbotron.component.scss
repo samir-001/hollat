@@ -8,15 +8,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     @media (max-width:900px) {
         flex-direction: column!important; 
-        overflow: hidden;
-        height: auto;
-        padding: 30px 20px; 
+        padding: 0 20px; 
+        box-sizing: border-box;
 }
     &__item{
         flex: 1;
         overflow: hidden;
+        @media (max-width:900px){
+            flex: none;
+        }
      
         .image{
        
@@ -35,6 +38,9 @@
         .content-title{
             font-size: 7em;
             margin: 0;
+            @media (max-width:900px) {
+                font-size: 3em;
+            }
         }
         .content-text{
             margin:10px 0  ;
@@ -44,6 +50,10 @@
             flex-direction: row;
             font-size: 18px;
             justify-content: flex-end;
+            @media (max-width:900px) {
+                flex-direction: column!important;
+                overflow: hidden;
+            }
             
         }
     }

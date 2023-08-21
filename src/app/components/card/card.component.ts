@@ -8,7 +8,6 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class CardComponent {
 @Input() isExtendable:boolean = false;
-
 @Input() cardTitle:string ='' ;
 @Input() cardContent:string ='';
 @Input() cardIcon:string  ='';

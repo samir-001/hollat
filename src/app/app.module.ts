@@ -18,6 +18,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ScreenItemComponent } from './components/screen-item/screen-item.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -44,7 +45,8 @@ import { ContactInfoComponent } from './components/contact-info/contact-info.com
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    MatIconModule
     
   ],
   exports:[

@@ -25,16 +25,15 @@
                     </div>
                 </div>
             </div>
-            <div class="about__image about__section">
-                <div>
+            <div class="about__image about__section"  [class.about__image--en]="dictionary.lang!=='ar'">
+                <div class="first-image" >
                     <img src="/assets/image3.jpg"/>
                 </div>
-                <div>
+                <div class="image-group"  [class.about__image--en]="dictionary.lang!=='ar'">
                     <img src="/assets/image1.jpg"/>
-                </div>
-                <div>
                     <img src="/assets/image2.jpg"/>
                 </div>
+             
             
             </div>
         </div>

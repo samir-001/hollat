@@ -4,24 +4,30 @@
         <div class="nav-bar__content" [class.en]="dictionary.lang==='en'">
       
           <div class="nav-bar__linkscontrols" [class.en]="dictionary.lang!=='ar'">
-              <div class="nav-bar__control">
-                <div>
-                    test
+            <div class="nav-bar__controls" [class.en]="dictionary.lang==='en'">
+                
+                <div class="nav-bar__menu-btn" (click)="toggleNav()">
+                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span class="dash" [class.dark]="!isTopZero"></span>
                 </div>
-                  <div class="nav-bar__menu-btn" (click)="toggleNav()">
-                    <span class="dash">
-                    </span>
-                  </div>
+
+                <div class="search" >
+                    <mat-icon>search</mat-icon>
+                </div>
+                <div class="btn" [class.btn--dark]="!isTopZero">
+                    {{dictionary.lang === "ar"?dictionary.requestDemo.ar:dictionary.requestDemo.en}}
+                </div>
             </div>
             
-                <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()"[class.nav-bar--white]="!isTopZero">
-                    {{dictionary.lang}}
-                </div>
-              <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
-
-                      <div class="nav-bar__links" [class.en]="dictionary.lang!=='ar'">
-                        <a 
-                        [class.nav-bar--white]="!isTopZero"
+            <div class="nav-bar__links-wrapper" [class.open] ="showNavBar">
+                
+                <div class="nav-bar__links" [class.en]="dictionary.lang!=='ar'">
+                    <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()">
+                        {{dictionary.lang}}
+                    </div>
+                    <a 
+                        [class.nav-bar-dark]="!isTopZero"
                         routerLink="/contact" 
                         routerLinkActive="active-page" 
                         (click)="closeNav()">
@@ -29,22 +35,22 @@
                         </a>
                          
                           <a 
-                          [class.nav-bar--white]="!isTopZero"
+                        [class.nav-bar-dark]="!isTopZero"
                           routerLink="/features" 
                           routerLinkActive="active-page" 
                           (click)="closeNav()">
                               {{dictionary.lang === "ar"?dictionary.productFeatures.ar:dictionary.productFeatures.en}}
                           </a>
                           <a
-                          [class.nav-bar--white]="!isTopZero"
-                          routerLink="/about" 
-                          routerLinkActive="active-page" 
-                          (click)="closeNav()">
-                              {{dictionary.lang === "ar"?dictionary.about.ar:dictionary.about.en}}
-                          </a>
+                        [class.nav-bar-dark]="!isTopZero"
+                        routerLink="/about"     
+                        routerLinkActive="active-page" 
+                        (click)="closeNav()">
+                            {{dictionary.lang === "ar"?dictionary.about.ar:dictionary.about.en}}
+                        </a>
                         
                           <a 
-                          [class.nav-bar--white]="!isTopZero"
+                        [class.nav-bar-dark]="!isTopZero"
                           routerLink="/home" 
                           routerLinkActive="active-page" 
                           (click)="closeNav()">
