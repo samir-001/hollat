@@ -51,13 +51,13 @@
         &-btn{
             position: absolute;
             bottom: -7px;
-            right: -22px;
+            right: -14px;
             width: 0; 
             height: 0; 
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
             transform: rotate(-45deg);
-            border-top: 30px solid rgb(117,202,191);
+            border-top: 20px solid rgb(117,202,191);
         }
     }
     &__extended-content{
