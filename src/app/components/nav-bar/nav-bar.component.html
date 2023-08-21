@@ -97,10 +97,13 @@
 <div class="curtain" [class.open]="showNavBar" [class.open]="curtain">
     <div class="curtain__content">
         <div *ngIf="cutainContent === 'search'">
-            <input type="text"/>
-            <button class="v=btn">search</button>
+            <div class="curtain__content__title">{{dictionary.lang === 'en' ?'search':'بحث حُلت'}}</div>
+            <div class="curtain__content__search" >
+                <input  class='search-input' type="text" [placeholder]="dictionary.lang === 'en' ?'search':'بحث حلت'" [class.search-input--en]="dictionary.lang === 'en'" />
+                <button class="search-btn" [class.search-btn--en]="dictionary.lang === 'en'" ><mat-icon>search</mat-icon></button>
+            </div>
         </div>
-        <div *ngIf="cutainContent === 'carousel'">
+        <div class="curtain__content__search" *ngIf="cutainContent === 'carousel'">
             carousel
         </div>
     </div>

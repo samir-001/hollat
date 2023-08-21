@@ -10,4 +10,5 @@ export class JumbotronComponent {
   constructor(public dictionary:LanguageService){
 
   }
+
 }
