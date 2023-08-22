@@ -6,12 +6,14 @@
     background-position: center center;
     color:white;
     font-size: 26px;
+    @media (max-width:950px) {
+        font-size: 20px;        }
 
     &__title{
         font-size: 52px;
         margin: 10px;
         @media (max-width:950px) {
-            font-size: 44px;        }
+            font-size: 34px;        }
     }
     &__control{
         padding: 20px;

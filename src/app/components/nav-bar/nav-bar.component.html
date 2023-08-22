@@ -7,14 +7,14 @@
             <div class="nav-bar__controls" [class.en]="dictionary.lang==='en'">
                 
                 <div class="nav-bar__menu-btn" (click)="toggleNav()" [class.hide]="scrWidth > 970" >
-                    <span class="dash" [class.dark]="!isTopZero"></span>
-                    <span class="dash" [class.dark]="!isTopZero"></span>
-                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span [class.active] ="showNavBar"   class="dash" [class.dark]="!isTopZero"></span>
+                    <span class="dash" [class.hide] ="showNavBar"  [class.dark]="!isTopZero"></span>
+                    <span [class.reverse] ="showNavBar"   class="dash" [class.dark]="!isTopZero"></span>
                 </div>
                 <div class="nav-bar__menu-btn "  (click)="toggleCurtain()" (click)="curtainContent('carousel')" [class.hide]="scrWidth < 970">
-                    <span class="dash" [class.dark]="!isTopZero"></span>
-                    <span class="dash" [class.dark]="!isTopZero"></span>
-                    <span class="dash" [class.dark]="!isTopZero"></span>
+                    <span [class.active] ="curtain"   class="dash" [class.dark]="!isTopZero"></span>
+                    <span [class.hide] ="curtain"  class="dash" [class.dark]="!isTopZero"></span>
+                    <span [class.reverse] ="curtain"   class="dash" [class.dark]="!isTopZero"></span>
                 </div>
 
                 <div class="search" (click)="toggleCurtain()"  (click)="curtainContent('search')" >
