@@ -32,9 +32,22 @@
         <div class="form__row">
             <textarea rows="5" placeholder="message"  resize="none" name="message" [(ngModel)]="contact.message"></textarea>
         </div>
-        <button type="submit" class="animated-btn-container animated-btn-container-dark">
-            <svg><rect class="dark"></rect></svg>
-            {{dictionary.lang === "ar"?dictionary.send.ar :dictionary.send.en}}
-        </button>
+        <div class="btn-container" (click)="navTo('about')">
+            <a  class="ghost-btn">
+                <svg>
+                  <defs>
+                    <linearGradient id="grid1">
+                      <stop offset="0%" stop-color="#FF8282"/>
+                      <stop offset="100%" stop-color="#E178ED" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="url(#grid1)"></rect>
+                </svg>
+                <span  class="dark">
+                    {{dictionary.lang === "ar"?dictionary.send.ar :dictionary.send.en}}
+                </span>
+             </a>
+        </div>
+
     </form>
 </div>
