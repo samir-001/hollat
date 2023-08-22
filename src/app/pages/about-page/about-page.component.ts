@@ -10,6 +10,7 @@ export class AboutPageComponent {
   public showMore!:boolean
   constructor(public dictionary:LanguageService){
     this.showMore = false
+    window.scrollTo(0,0)
   }
   changeLang(lang:string):string[]{
     return  lang === "ar"? this.dictionary.aboutHollatMainPargraph.ar.split(".") : this.dictionary.aboutHollatMainPargraph.en.split(".")

@@ -14,7 +14,7 @@
                 </p>
                 <div class="content-control" [class.en]="dictionary.lang!=='ar'">
                     <div class="btn-container" >
-                        <a class="ghost-btn">
+                        <a href="#screens" class="ghost-btn">
                             <svg>
                               <defs>
                                 <linearGradient>
@@ -29,8 +29,8 @@
                             </span>
                          </a>
                     </div>
-                    <div class="btn-container" >
-                        <a href="contact.html" class="ghost-btn">
+                    <div class="btn-container"  (click)="navTo('features')" >
+                        <a class="ghost-btn">
                             <svg>
                               <defs>
                                 <linearGradient>

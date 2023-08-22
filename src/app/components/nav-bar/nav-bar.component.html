@@ -20,17 +20,15 @@
                 <div class="search" (click)="toggleCurtain()"  (click)="curtainContent('search')" >
                     <mat-icon>search</mat-icon>
                 </div>
-                <div class="btn" [class.btn--dark]="!isTopZero">
+                <a  routerLink="/contact"   class="btn" [class.btn--dark]="!isTopZero">
                     {{dictionary.lang === "ar"?dictionary.requestDemo.ar:dictionary.requestDemo.en}}
-                </div>
+                </a>
             </div>
             
             <div class="nav-bar__links-wrapper"  [class.open] ="showNavBar"   [class.justify-start] ="dictionary.lang !=='ar' && scrWidth < 970 ">
                 
                 <div class="nav-bar__links" [class.en]="dictionary.lang === 'en'" [class.align-start] ="dictionary.lang !=='ar' && scrWidth < 970 "   >
-                    <!-- <div class="nav-bar__lang-btn" (click)="dictionary.changeLanguage()">
-                        {{dictionary.lang}}
-                    </div> -->
+                 
                     <a
                         [class.color-dark] ="!isTopZero && scrWidth > 970 "
                         (click)="dictionary.changeLanguage()"

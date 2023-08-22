@@ -9,6 +9,6 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class MainFeaturePageComponent {
   constructor(public featureData:FeaturesService,public dictionary:LanguageService){
-
+    window.scrollTo(0,0)
   }
 }

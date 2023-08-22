@@ -6,8 +6,8 @@
         {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}
     </div>
     <div class="call-to-action__control">
-        <div class="btn-container">
-            <a href="contact.html" class="ghost-btn">
+        <div class="btn-container" (click)="navTo('contact')">
+            <a  class="ghost-btn">
                 <svg>
                   <defs>
                     <linearGradient>
@@ -22,8 +22,8 @@
                 </span>
              </a>
         </div>
-        <div class="btn-container">
-            <a href="contact.html" class="ghost-btn">
+        <div class="btn-container" (click)="navTo('features')">
+            <a  class="ghost-btn">
                 <svg>
                   <defs>
                     <linearGradient>

@@ -7,8 +7,8 @@
                         {{dictionary.lang === "ar"?dictionary.aboutHollat.ar :dictionary.aboutHollat.en}}
                     </div>
                     <div class="about__pargraph-item"*ngFor="let i of changeLang(dictionary.lang)">{{i}}</div>
-                    <div class="btn-container">
-                        <a href="contact.html" class="ghost-btn">
+                    <div class="btn-container" (click)="navTo('about')">
+                        <a  class="ghost-btn">
                             <svg>
                               <defs>
                                 <linearGradient id="grid1">

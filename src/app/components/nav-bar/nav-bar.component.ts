@@ -28,13 +28,20 @@ export class NavBarComponent {
 
   }
   toggleNav():void{
+    if(!this.showNavBar){
+      this.closeCurtain()
+    }
   this.showNavBar = !this.showNavBar
  }
   toggleCurtain():void{
   this.curtain = !this.curtain
  }
  closeNav():void{
-  this.showNavBar = false
+  this.showNavBar = false;
+ this.closeCurtain()
+ }
+ closeCurtain(){
+  this.curtain =false
  }
  curtainContent(value:string){
   this.cutainContent = value

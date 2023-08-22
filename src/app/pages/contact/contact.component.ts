@@ -8,6 +8,6 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class ContactComponent {
   constructor(public dictionary:LanguageService){
-
+    window.scrollTo(0,0)
   }
 }
