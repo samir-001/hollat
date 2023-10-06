@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "online-store": {
+      "i18n":{
+        "sourceLocale":"en-US",
+        "locales": {
+          "ar-EG":"src/locales/messages.ar.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":true,
             "outputPath": "dist/online-store",
             "index": "src/index.html",
             "main": "src/main.ts",

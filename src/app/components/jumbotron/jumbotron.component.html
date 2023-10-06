@@ -9,8 +9,9 @@
                 <h3 class="content-title">
                     {{dictionary.lang === "ar"?dictionary.hollat.ar :dictionary.hollat.en}}
                 </h3>
-                <p class="content-text">
-                    {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}
+                <p class="content-text" i18n>
+                    <!-- {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}} -->
+                    Ticketing Management Platform. Fast Setup and easy to use.
                 </p>
                 <div class="content-control" [class.en]="dictionary.lang!=='ar'">
                     <div class="btn-container" >
@@ -24,8 +25,9 @@
                               </defs>
                               <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="#ffffff"></rect>
                             </svg>
-                            <span>
-                                {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}}
+                            <span i18n>
+                                <!-- {{dictionary.lang === "ar"?dictionary.viewProductScreens.ar :dictionary.viewProductScreens.en}} -->
+                                view product screens
                             </span>
                          </a>
                     </div>
@@ -40,8 +42,9 @@
                               </defs>
                               <rect width="206" height="50" x="5" y="5" rx="25" fill="none" stroke="#ffffff"></rect>
                             </svg>
-                            <span>
-                                {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}}
+                            <span i18n>
+                                <!-- {{dictionary.lang === "ar"?dictionary.productFeatures.ar :dictionary.productFeatures.en}} -->
+                                product features
                             </span>
                          </a>
                     </div>
