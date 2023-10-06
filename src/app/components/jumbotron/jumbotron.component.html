@@ -7,7 +7,8 @@
             </div>
             <div class="jumbotron__content jumbotron__item" [class.en]="dictionary.lang!=='ar'">
                 <h3 class="content-title">
-                    {{dictionary.lang === "ar"?dictionary.hollat.ar :dictionary.hollat.en}}
+                    <!-- {{dictionary.lang === "ar"?dictionary.hollat.ar :dictionary.hollat.en}} -->
+                    {{"hollat"| translate}}
                 </h3>
                 <p class="content-text">
                     {{dictionary.lang === "ar"?dictionary.jumbotronText.ar :dictionary.jumbotronText.en}}

@@ -34,7 +34,7 @@
                         (click)="dictionary.changeLanguage()"
                         [class.nav-bar-dark]="!isTopZero"
                         (click)="closeNav()">
-                        {{dictionary.lang}}
+                        {{dictionary.lang === "ar"? "en":"ar"}}
                         </a>
                     <a 
                         [class.color-dark] ="!isTopZero && scrWidth > 970 "

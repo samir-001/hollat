@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {word} from "../modals/lang"
 import { LoadingService } from './loading.service';
+import { TranslateService } from '@ngx-translate/core';
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
   public lang!:string
-  constructor(private loading:LoadingService){
+  constructor(private loading:LoadingService,private translateService:TranslateService){
     this.lang ="ar"
 
   }
@@ -14,7 +15,9 @@ export class LanguageService {
   public changeLanguage(){
     this.loading.isLoading = true;
     this.lang = this.lang === "ar" ?  this.lang = "en" :   this.lang = "ar"
+    localStorage.setItem('lang',this.lang || 'ar')
     this.endLoading()
+    this.translateService.use(localStorage.getItem('lang')|| 'en')
   }
 
 endLoading(){
